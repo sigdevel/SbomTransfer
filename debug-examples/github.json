@@ -1,0 +1,134 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:1423d8e2-6647-4704-a8ce-8aee74d8f8bd",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-10T10:03:56Z",
+        "tools": [
+            {
+                "vendor": "OWASP",
+                "name": "Dependency-Track",
+                "version": "4.12.0"
+            }
+        ],
+        "component": {
+            "type": "library",
+            "bom-ref": "6f871349-eb20-4826-ba58-6d861f82d06f",
+            "name": "_Test_cert",
+            "version": "",
+            "manufacturer": {
+                "name": "_Test_org"
+            }
+        }
+    },
+    "components": [
+        {
+            "type": "library",
+            "bom-ref": "548833be-6862-486c-acdd-0ec4bc37b6bd",
+            "name": "dosfstools",
+            "version": "4.1",
+            "purl": "pkg:github/dosfstools@4.1",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "distribution",
+                    "url": "https://github.com/dosfstools/dosfstools/archive/refs/tags/v4.1.tar.gz"
+                },
+                {
+                    "type": "source-distribution",
+                    "url": "https://github.com/dosfstools/dosfstools/archive/refs/tags/v4.1.tar.gz",
+                    "hashes": [
+                        {
+                            "alg": "STREEBOG-256",
+                            "content": "ACEAE045C518EC705ACFF35B75E53153E5A5661632D55F1EBF0B21100C36F318"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "25437812-1144-4ae8-b675-c20c4fb92690",
+            "name": "Sqlite",
+            "version": "3.29.0",
+            "purl": "pkg:github/Sqlite@3.29.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "distribution",
+                    "url": "https://github.com/sqlite/sqlite/archive/refs/tags/version-3.29.0.tar.gz"
+                },
+                {
+                    "type": "source-distribution",
+                    "url": "https://github.com/sqlite/sqlite/archive/refs/tags/version-3.29.0.tar.gz",
+                    "hashes": [
+                        {
+                            "alg": "STREEBOG-256",
+                            "content": "6007B899E340C1D081CC48C251D129D5BDE0194F6ACD0B49F0ACA068D7FD1C65"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "0772a25a-6eed-46ec-bd21-c6fb4c7ee09d",
+            "name": "Qt",
+            "version": "5.12.12",
+            "purl": "pkg:github/qt/qt5",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/qt/qt5"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:github/qt/qt5"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "548833be-6862-486c-acdd-0ec4bc37b6bd",
+            "dependsOn": []
+        },
+        {
+            "ref": "25437812-1144-4ae8-b675-c20c4fb92690",
+            "dependsOn": []
+        },
+        {
+            "ref": "0772a25a-6eed-46ec-bd21-c6fb4c7ee09d",
+            "dependsOn": []
+        }
+    ]
+}

@@ -1,0 +1,475 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:dec1f1fb-6b7b-4615-b851-e1722b085df3",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-10T10:28:12Z",
+        "tools": [
+            {
+                "vendor": "OWASP",
+                "name": "Dependency-Track",
+                "version": "4.12.0"
+            }
+        ],
+        "component": {
+            "type": "library",
+            "bom-ref": "215aac0b-a63c-4c31-bc72-4a9fa83910b2",
+            "name": "_Test_cert",
+            "version": "",
+            "manufacturer": {
+                "name": "_Test_org"
+            }
+        }
+    },
+    "components": [
+        {
+            "type": "library",
+            "bom-ref": "c39351ab-0d4c-4d84-aeea-d09983cb8646",
+            "name": "dosfstools",
+            "version": "4.1",
+            "purl": "pkg:github/dosfstools@4.1",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "distribution",
+                    "url": "https://github.com/dosfstools/dosfstools/archive/refs/tags/v4.1.tar.gz"
+                },
+                {
+                    "type": "source-distribution",
+                    "url": "https://github.com/dosfstools/dosfstools/archive/refs/tags/v4.1.tar.gz",
+                    "hashes": [
+                        {
+                            "alg": "STREEBOG-256",
+                            "content": "ACEAE045C518EC705ACFF35B75E53153E5A5661632D55F1EBF0B21100C36F318"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "b16c38e3-a225-4d08-a76e-2007350e1883",
+            "name": "Sqlite",
+            "version": "3.29.0",
+            "purl": "pkg:github/Sqlite@3.29.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "distribution",
+                    "url": "https://github.com/sqlite/sqlite/archive/refs/tags/version-3.29.0.tar.gz"
+                },
+                {
+                    "type": "source-distribution",
+                    "url": "https://github.com/sqlite/sqlite/archive/refs/tags/version-3.29.0.tar.gz",
+                    "hashes": [
+                        {
+                            "alg": "STREEBOG-256",
+                            "content": "6007B899E340C1D081CC48C251D129D5BDE0194F6ACD0B49F0ACA068D7FD1C65"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "1b1f29dc-99d1-4a5b-9505-eef77cf1d412",
+            "name": "Qt",
+            "version": "5.12.12",
+            "purl": "pkg:github/qt/qt5",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://github.com/qt/qt5"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:github/qt/qt5"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "30ddb1ee-1413-4dfd-9471-4ee1d4167b60",
+            "name": "org.bouncycastle/bcutil-jdk18on",
+            "version": "1.76",
+            "purl": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "48ac74e9-0afb-424c-ae23-12c796581468",
+            "name": "org.codehaus.plexus/plexus-utils",
+            "version": "4.0.0",
+            "purl": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "37d88f37-542d-4737-b26e-b8b124eeb86e",
+            "name": "org.springframework.data/spring-data-jpa",
+            "version": "3.2.1",
+            "purl": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "5012a451-d646-49ab-8e56-5edb652525c6",
+            "name": "org.springframework.retry/spring-retry",
+            "version": "2.0.2",
+            "purl": "pkg:maven/org.springframework.retry/spring-retry@2.0.2",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.springframework.retry/spring-retry@2.0.2"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.springframework.retry/spring-retry@2.0.2"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "76948749-b124-4a39-908f-fad0d9d6ae76",
+            "name": "react-dom",
+            "version": "18.2.0",
+            "purl": "pkg:npm/react-dom@18.2.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:npm/react-dom@18.2.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:npm/react-dom@18.2.0"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "ad1a19f6-5d44-4cb1-9b4e-7ea7e9fca747",
+            "name": "reselect",
+            "version": "4.1.7",
+            "purl": "pkg:npm/reselect@4.1.7",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:npm/reselect@4.1.7"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:npm/reselect@4.1.7"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "f57de3d9-fa03-48ce-b864-7138dea234c0",
+            "name": "tslib",
+            "version": "2.5.0",
+            "purl": "pkg:npm/tslib@2.5.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:npm/tslib@2.5.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:npm/tslib@2.5.0"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "cbbc7687-9219-4cc7-b9f7-eaabbeac7dd4",
+            "name": "Microsoft.AspNetCore.Razor.Language",
+            "version": "3.1.0",
+            "purl": "pkg:nuget/Microsoft.AspNetCore.Razor.Language@3.1.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Microsoft.AspNetCore.Razor.Language/3.1.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Microsoft.AspNetCore.Razor.Language@3.1.0"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "96b0669e-901a-48a2-a3f4-38e02be7b6dc",
+            "name": "Microsoft.Extensions.Configuration",
+            "version": "3.1.18",
+            "purl": "pkg:nuget/Microsoft.Extensions.Configuration@3.1.18",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Microsoft.Extensions.Configuration/3.1.18"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Microsoft.Extensions.Configuration@3.1.18"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "9cef7530-312c-4d72-883c-8db05c4a89dc",
+            "name": "Microsoft.Extensions.FileSystemGlobbing",
+            "version": "3.1.31",
+            "purl": "pkg:nuget/Microsoft.Extensions.FileSystemGlobbing@3.1.31",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Microsoft.Extensions.FileSystemGlobbing/3.1.31"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Microsoft.Extensions.FileSystemGlobbing@3.1.31"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "fc417f42-3976-4ae5-b432-cdf6903858ee",
+            "name": "Serilog",
+            "version": "2.9.0",
+            "purl": "pkg:nuget/Serilog@2.9.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Serilog/2.9.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Serilog@2.9.0"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "c39351ab-0d4c-4d84-aeea-d09983cb8646",
+            "dependsOn": []
+        },
+        {
+            "ref": "b16c38e3-a225-4d08-a76e-2007350e1883",
+            "dependsOn": []
+        },
+        {
+            "ref": "1b1f29dc-99d1-4a5b-9505-eef77cf1d412",
+            "dependsOn": []
+        },
+        {
+            "ref": "30ddb1ee-1413-4dfd-9471-4ee1d4167b60",
+            "dependsOn": []
+        },
+        {
+            "ref": "48ac74e9-0afb-424c-ae23-12c796581468",
+            "dependsOn": []
+        },
+        {
+            "ref": "37d88f37-542d-4737-b26e-b8b124eeb86e",
+            "dependsOn": []
+        },
+        {
+            "ref": "5012a451-d646-49ab-8e56-5edb652525c6",
+            "dependsOn": []
+        },
+        {
+            "ref": "76948749-b124-4a39-908f-fad0d9d6ae76",
+            "dependsOn": []
+        },
+        {
+            "ref": "ad1a19f6-5d44-4cb1-9b4e-7ea7e9fca747",
+            "dependsOn": []
+        },
+        {
+            "ref": "f57de3d9-fa03-48ce-b864-7138dea234c0",
+            "dependsOn": []
+        },
+        {
+            "ref": "cbbc7687-9219-4cc7-b9f7-eaabbeac7dd4",
+            "dependsOn": []
+        },
+        {
+            "ref": "96b0669e-901a-48a2-a3f4-38e02be7b6dc",
+            "dependsOn": []
+        },
+        {
+            "ref": "9cef7530-312c-4d72-883c-8db05c4a89dc",
+            "dependsOn": []
+        },
+        {
+            "ref": "fc417f42-3976-4ae5-b432-cdf6903858ee",
+            "dependsOn": []
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:bb7b2f63-5c8c-4c80-93a0-430d70547fe6",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-10T09:39:41Z",
+        "tools": [
+            {
+                "vendor": "OWASP",
+                "name": "Dependency-Track",
+                "version": "4.12.0"
+            }
+        ],
+        "component": {
+            "type": "library",
+            "bom-ref": "cf182894-5048-4d03-97ae-3f694c9e5268",
+            "name": "_Test_cert",
+            "version": "",
+            "manufacturer": {
+                "name": "_Test_org"
+            }
+        }
+    },
+    "components": [
+        {
+            "type": "library",
+            "bom-ref": "fd024bdb-c522-4d43-89e1-3b6ef2b69de8",
+            "name": "react-dom",
+            "version": "18.2.0",
+            "purl": "pkg:npm/react-dom@18.2.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:npm/react-dom@18.2.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:npm/react-dom@18.2.0"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "3fafea2e-eecd-45db-b246-435f47a7ddfa",
+            "name": "reselect",
+            "version": "4.1.7",
+            "purl": "pkg:npm/reselect@4.1.7",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:npm/reselect@4.1.7"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:npm/reselect@4.1.7"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "1ddcc1c5-aa34-4ab2-b9b1-d4513aaf3e12",
+            "name": "tslib",
+            "version": "2.5.0",
+            "purl": "pkg:npm/tslib@2.5.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:npm/tslib@2.5.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:npm/tslib@2.5.0"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "fd024bdb-c522-4d43-89e1-3b6ef2b69de8",
+            "dependsOn": []
+        },
+        {
+            "ref": "3fafea2e-eecd-45db-b246-435f47a7ddfa",
+            "dependsOn": []
+        },
+        {
+            "ref": "1ddcc1c5-aa34-4ab2-b9b1-d4513aaf3e12",
+            "dependsOn": []
+        }
+    ]
+}

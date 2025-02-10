@@ -1,0 +1,153 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:f9560a2c-4bbc-4c00-9d59-56f2eb7581db",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-10T09:38:35Z",
+        "tools": [
+            {
+                "vendor": "OWASP",
+                "name": "Dependency-Track",
+                "version": "4.12.0"
+            }
+        ],
+        "component": {
+            "type": "library",
+            "bom-ref": "e0d77434-1fd7-4b84-a389-4da2d70d0323",
+            "name": "_Test_cert",
+            "version": "",
+            "manufacturer": {
+                "name": "_Test_org"
+            }
+        }
+    },
+    "components": [
+        {
+            "type": "library",
+            "bom-ref": "82002e99-ba56-49a9-b033-d6d4e4b4cad0",
+            "name": "org.bouncycastle/bcutil-jdk18on",
+            "version": "1.76",
+            "purl": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "7370c1bb-632c-4ba7-bbf3-8f29f3940cb4",
+            "name": "org.codehaus.plexus/plexus-utils",
+            "version": "4.0.0",
+            "purl": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "5d8c6e75-f316-4eb3-9523-ec71079efe1f",
+            "name": "org.springframework.data/spring-data-jpa",
+            "version": "3.2.1",
+            "purl": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "0293ea19-f829-4c31-970e-94f1f073ffee",
+            "name": "org.springframework.retry/spring-retry",
+            "version": "2.0.2",
+            "purl": "pkg:maven/org.springframework.retry/spring-retry@2.0.2",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "pkg:maven/org.springframework.retry/spring-retry@2.0.2"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:maven/org.springframework.retry/spring-retry@2.0.2"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "82002e99-ba56-49a9-b033-d6d4e4b4cad0",
+            "dependsOn": []
+        },
+        {
+            "ref": "7370c1bb-632c-4ba7-bbf3-8f29f3940cb4",
+            "dependsOn": []
+        },
+        {
+            "ref": "5d8c6e75-f316-4eb3-9523-ec71079efe1f",
+            "dependsOn": []
+        },
+        {
+            "ref": "0293ea19-f829-4c31-970e-94f1f073ffee",
+            "dependsOn": []
+        }
+    ]
+}

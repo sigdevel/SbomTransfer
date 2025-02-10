@@ -1,0 +1,153 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:e567b12c-e9c2-48ef-bfd9-2b786b5ca71b",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-10T09:40:03Z",
+        "tools": [
+            {
+                "vendor": "OWASP",
+                "name": "Dependency-Track",
+                "version": "4.12.0"
+            }
+        ],
+        "component": {
+            "type": "library",
+            "bom-ref": "09ffb125-8d0d-4f87-9197-0ef0feea127d",
+            "name": "_Test_cert",
+            "version": "",
+            "manufacturer": {
+                "name": "_Test_org"
+            }
+        }
+    },
+    "components": [
+        {
+            "type": "library",
+            "bom-ref": "515bd698-9359-45e6-af39-7cac4e8f7612",
+            "name": "Microsoft.AspNetCore.Razor.Language",
+            "version": "3.1.0",
+            "purl": "pkg:nuget/Microsoft.AspNetCore.Razor.Language@3.1.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Microsoft.AspNetCore.Razor.Language/3.1.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Microsoft.AspNetCore.Razor.Language@3.1.0"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "a59b1219-ea58-4c51-83bf-a8fa8ea1baaf",
+            "name": "Microsoft.Extensions.Configuration",
+            "version": "3.1.18",
+            "purl": "pkg:nuget/Microsoft.Extensions.Configuration@3.1.18",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Microsoft.Extensions.Configuration/3.1.18"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Microsoft.Extensions.Configuration@3.1.18"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "ed20bb2c-4c19-4896-951b-659c837d2b2d",
+            "name": "Microsoft.Extensions.FileSystemGlobbing",
+            "version": "3.1.31",
+            "purl": "pkg:nuget/Microsoft.Extensions.FileSystemGlobbing@3.1.31",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "no"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "yes"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Microsoft.Extensions.FileSystemGlobbing/3.1.31"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Microsoft.Extensions.FileSystemGlobbing@3.1.31"
+                }
+            ]
+        },
+        {
+            "type": "library",
+            "bom-ref": "9c602ea5-9a30-439e-bed3-ff930cb304cd",
+            "name": "Serilog",
+            "version": "2.9.0",
+            "purl": "pkg:nuget/Serilog@2.9.0",
+            "properties": [
+                {
+                    "name": "GOST:attack_surface",
+                    "value": "yes"
+                },
+                {
+                    "name": "GOST:security_function",
+                    "value": "no"
+                }
+            ],
+            "externalReferences": [
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Serilog/2.9.0"
+                },
+                {
+                    "type": "vcs",
+                    "url": "pkg:nuget/Serilog@2.9.0"
+                }
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "515bd698-9359-45e6-af39-7cac4e8f7612",
+            "dependsOn": []
+        },
+        {
+            "ref": "a59b1219-ea58-4c51-83bf-a8fa8ea1baaf",
+            "dependsOn": []
+        },
+        {
+            "ref": "ed20bb2c-4c19-4896-951b-659c837d2b2d",
+            "dependsOn": []
+        },
+        {
+            "ref": "9c602ea5-9a30-439e-bed3-ff930cb304cd",
+            "dependsOn": []
+        }
+    ]
+}
