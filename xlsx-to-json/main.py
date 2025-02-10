@@ -95,14 +95,37 @@ def download_file(url):
         return None
 
 
+def validate_github_website_url(url):
+    """
+    Проверяет, соответствует ли URL формату https://github.com/{author}/{repo}
+    """
+    parsed_url = urlparse(url)
+    if parsed_url.scheme != "https" or parsed_url.netloc != "github.com":
+        return False
+    path_parts = parsed_url.path.strip("/").split("/")
+    return len(path_parts) == 2 and all(path_parts)
+
+
+def extract_github_repo(url):
+    parsed_url = urlparse(url)
+    path_parts = parsed_url.path.strip("/").split("/")
+    if len(path_parts) >= 2:
+        return path_parts[0], path_parts[1]
+    return None, None
+
+
 def process_external_references(row, component_name, version):
     external_references = []
     unique_urls = set()
+    github_distribution_urls = []
+    is_github_purl = False
 
     if pd.notna(row["externalReferences"]):
         for ref in str(row["externalReferences"]).split(","):
             ref = ref.strip()
             if ref.endswith(".tgz") or ref.endswith(".tar.gz"):
+                if ref.startswith("https://github.com/"):
+                    github_distribution_urls.append(ref)
                 file_path = download_file(ref)
                 if file_path:
                     hash_value = compute_hash(file_path)
@@ -124,21 +147,38 @@ def process_external_references(row, component_name, version):
                         })
             else:
                 if ref not in unique_urls:
-                    external_references.append({
-                        "type": "website",
-                        "url": ref
-                    })
-                    unique_urls.add(ref)
+                    # Дополнительная проверка для типа "website"
+                    if ref.startswith("https://github.com/"):
+                        if validate_github_website_url(ref):
+                            external_references.append({
+                                "type": "website",
+                                "url": ref
+                            })
+                            unique_urls.add(ref)
+                            is_github_purl = True
+                        else:
+                            print(f"Предупреждение: Некорректный формат GitHub URL для 'website': {ref}")
+                            continue  # Пропустить некорректный URL
+                    else:
+                        external_references.append({
+                            "type": "website",
+                            "url": ref
+                        })
+                        unique_urls.add(ref)
                 if ref.startswith("https://github.com/"):
                     vcs_url = handle_github_purl(ref)
                 elif ref.startswith("https://www.nuget.org/packages/"):
-                    vcs_url = nuget_url_to_purl(ref)
+                    if not is_github_purl:
+                        vcs_url = nuget_url_to_purl(ref)
+                    else:
+                        vcs_url = None
                 else:
                     vcs_url = ref
-                external_references.append({
-                    "type": "vcs",
-                    "url": vcs_url
-                })
+                if vcs_url:
+                    external_references.append({
+                        "type": "vcs",
+                        "url": vcs_url
+                    })
     else:
         nuget_external_reference = generate_nuget_external_reference(component_name, version)
         if nuget_external_reference and nuget_external_reference not in unique_urls:
@@ -151,6 +191,36 @@ def process_external_references(row, component_name, version):
                 "type": "vcs",
                 "url": handle_nuget_purl(None, component_name, version)
             })
+
+    # Дополнительная проверка: если есть distribution с GitHub, то website должен быть только https://github.com/*/*
+    if github_distribution_urls:
+        for dist_url in github_distribution_urls:
+            author, repo = extract_github_repo(dist_url)
+            if author and repo:
+                github_repo_url = f"https://github.com/{author}/{repo}"
+                # Удаляем все website ссылки, которые не соответствуют формату GitHub репозитория
+                external_references = [
+                    ref for ref in external_references
+                    if not (ref.get("type") == "website" and ref.get("url", "").startswith("https://github.com/"))
+                ]
+                # Добавляем корректную GitHub репозитория ссылку
+                if validate_github_website_url(github_repo_url):
+                    external_references.append({
+                        "type": "website",
+                        "url": github_repo_url
+                    })
+        # Удаляем возможные дубликаты
+        seen = set()
+        unique_external_references = []
+        for ref in external_references:
+            try:
+                ref_string = json.dumps(ref, sort_keys=True)
+            except TypeError:
+                ref_string = str(ref)
+            if ref_string not in seen:
+                seen.add(ref_string)
+                unique_external_references.append(ref)
+        external_references = unique_external_references
 
     return external_references
 
@@ -193,11 +263,26 @@ def create_sbom_components(df):
             for ref in external_references
         )
         if github_distribution:
-            component["purl"] = f"pkg:github/{component_name}@{version}"
+            # Найдем первый GitHub distribution URL
+            github_dist_url = next(
+                (ref["url"] for ref in external_references if ref.get("type") == "distribution" and ref.get("url", "").startswith("https://github.com/")),
+                None
+            )
+            if github_dist_url:
+                author, repo = extract_github_repo(github_dist_url)
+                if author and repo:
+                    component["purl"] = f"pkg:github/{author}/{repo}@{version}"
         else:
             # Если purl был установлен ранее, оставить как есть
             if not component["purl"]:
                 component["purl"] = convert_purl(row["PURL"], component_name, version)
+
+        # Если purl у компонента pkg:github, удалить все nuget external references
+        if component["purl"] and component["purl"].startswith("pkg:github/"):
+            external_references = [
+                ref for ref in external_references
+                if not (ref.get("url", "").startswith("https://www.nuget.org/") or ref.get("url", "").startswith("pkg:nuget/"))
+            ]
 
         purl_value = component.get("purl", "")
         if purl_value and purl_value.startswith("pkg:npm/"):
@@ -213,12 +298,22 @@ def create_sbom_components(df):
                         "url": npm_website
                     })
 
-        if attack_surface == "undefined" or security_function == "undefined":
+        # Определяем, есть ли GitHub distribution для исключения добавления nuget external references
+        has_github_distribution = any(
+            ref.get("type") == "distribution" and ref.get("url", "").startswith("https://github.com/")
+            for ref in external_references
+        )
+
+        if (attack_surface == "undefined" or security_function == "undefined") and not has_github_distribution:
             nuget_external_reference = generate_nuget_external_reference(component_name, version)
             if nuget_external_reference and nuget_external_reference not in {ref['url'] for ref in external_references}:
                 external_references.append({
                     "type": "website",
                     "url": nuget_external_reference
+                })
+                external_references.append({
+                    "type": "vcs",
+                    "url": handle_nuget_purl(None, component_name, version)
                 })
 
         vcs_purl = None
