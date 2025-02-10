@@ -1,10 +1,10 @@
 {
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:dec1f1fb-6b7b-4615-b851-e1722b085df3",
+    "serialNumber": "urn:uuid:d00ee64e-1702-4112-b0d5-53ff396d738e",
     "version": 1,
     "metadata": {
-        "timestamp": "2025-02-10T10:28:12Z",
+        "timestamp": "2025-02-10T10:57:18Z",
         "tools": [
             {
                 "vendor": "OWASP",
@@ -14,7 +14,7 @@
         ],
         "component": {
             "type": "library",
-            "bom-ref": "215aac0b-a63c-4c31-bc72-4a9fa83910b2",
+            "bom-ref": "c2ea655a-bf75-458c-8745-a145036e1bd3",
             "name": "_Test_cert",
             "version": "",
             "manufacturer": {
@@ -25,18 +25,18 @@
     "components": [
         {
             "type": "library",
-            "bom-ref": "c39351ab-0d4c-4d84-aeea-d09983cb8646",
+            "bom-ref": "80ec5ac8-a0ee-45b3-bc20-556dcb2237d4",
             "name": "dosfstools",
             "version": "4.1",
             "purl": "pkg:github/dosfstools@4.1",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "no"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -53,23 +53,27 @@
                             "content": "ACEAE045C518EC705ACFF35B75E53153E5A5661632D55F1EBF0B21100C36F318"
                         }
                     ]
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/dosfstools/4.1"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "b16c38e3-a225-4d08-a76e-2007350e1883",
+            "bom-ref": "cc2e46da-b1cb-48c1-bd8a-bbbdecfa23bc",
             "name": "Sqlite",
             "version": "3.29.0",
             "purl": "pkg:github/Sqlite@3.29.0",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "yes"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "yes"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -86,23 +90,27 @@
                             "content": "6007B899E340C1D081CC48C251D129D5BDE0194F6ACD0B49F0ACA068D7FD1C65"
                         }
                     ]
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Sqlite/3.29.0"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "1b1f29dc-99d1-4a5b-9505-eef77cf1d412",
+            "bom-ref": "14d74c0f-49cf-40cf-902b-235c0e506a98",
             "name": "Qt",
             "version": "5.12.12",
             "purl": "pkg:github/qt/qt5",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "no"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -113,23 +121,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:github/qt/qt5"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/Qt/5.12.12"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "30ddb1ee-1413-4dfd-9471-4ee1d4167b60",
+            "bom-ref": "f844f966-d93d-4515-ab9e-f48dbcc18ae8",
             "name": "org.bouncycastle/bcutil-jdk18on",
             "version": "1.76",
             "purl": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "yes"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "no"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -140,23 +152,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.76"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/org.bouncycastle/bcutil-jdk18on/1.76"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "48ac74e9-0afb-424c-ae23-12c796581468",
+            "bom-ref": "3a8f2ec7-ac2f-4700-9096-b30e45309e50",
             "name": "org.codehaus.plexus/plexus-utils",
             "version": "4.0.0",
             "purl": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "yes"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -167,23 +183,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:maven/org.codehaus.plexus/plexus-utils@4.0.0"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/org.codehaus.plexus/plexus-utils/4.0.0"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "37d88f37-542d-4737-b26e-b8b124eeb86e",
+            "bom-ref": "4f2f1554-d666-40de-83b1-1a04e2ab46f5",
             "name": "org.springframework.data/spring-data-jpa",
             "version": "3.2.1",
             "purl": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "yes"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "yes"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -194,23 +214,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:maven/org.springframework.data/spring-data-jpa@3.2.1"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/org.springframework.data/spring-data-jpa/3.2.1"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "5012a451-d646-49ab-8e56-5edb652525c6",
+            "bom-ref": "071d450c-37eb-4613-b952-b453433df5d6",
             "name": "org.springframework.retry/spring-retry",
             "version": "2.0.2",
             "purl": "pkg:maven/org.springframework.retry/spring-retry@2.0.2",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "no"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -221,23 +245,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:maven/org.springframework.retry/spring-retry@2.0.2"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/org.springframework.retry/spring-retry/2.0.2"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "76948749-b124-4a39-908f-fad0d9d6ae76",
+            "bom-ref": "64da6324-afdc-4935-8f6d-99d14f848aaf",
             "name": "react-dom",
             "version": "18.2.0",
             "purl": "pkg:npm/react-dom@18.2.0",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "yes"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -248,23 +276,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:npm/react-dom@18.2.0"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/react-dom/18.2.0"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "ad1a19f6-5d44-4cb1-9b4e-7ea7e9fca747",
+            "bom-ref": "6f84c58a-e598-4543-acf1-2665d98b3617",
             "name": "reselect",
             "version": "4.1.7",
             "purl": "pkg:npm/reselect@4.1.7",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "no"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -275,23 +307,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:npm/reselect@4.1.7"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/reselect/4.1.7"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "f57de3d9-fa03-48ce-b864-7138dea234c0",
+            "bom-ref": "9a693f36-9723-4075-a0d3-89ff2949e24d",
             "name": "tslib",
             "version": "2.5.0",
             "purl": "pkg:npm/tslib@2.5.0",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "yes"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "yes"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -302,23 +338,27 @@
                 {
                     "type": "vcs",
                     "url": "pkg:npm/tslib@2.5.0"
+                },
+                {
+                    "type": "website",
+                    "url": "https://www.nuget.org/packages/tslib/2.5.0"
                 }
             ]
         },
         {
             "type": "library",
-            "bom-ref": "cbbc7687-9219-4cc7-b9f7-eaabbeac7dd4",
+            "bom-ref": "7e1dc39a-2bd0-4dc5-91bf-f564ba322a5a",
             "name": "Microsoft.AspNetCore.Razor.Language",
             "version": "3.1.0",
             "purl": "pkg:nuget/Microsoft.AspNetCore.Razor.Language@3.1.0",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "no"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -334,18 +374,18 @@
         },
         {
             "type": "library",
-            "bom-ref": "96b0669e-901a-48a2-a3f4-38e02be7b6dc",
+            "bom-ref": "7675381f-3869-4328-9ee8-8abb980608a3",
             "name": "Microsoft.Extensions.Configuration",
             "version": "3.1.18",
             "purl": "pkg:nuget/Microsoft.Extensions.Configuration@3.1.18",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "yes"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "yes"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -361,18 +401,18 @@
         },
         {
             "type": "library",
-            "bom-ref": "9cef7530-312c-4d72-883c-8db05c4a89dc",
+            "bom-ref": "6808834a-ec7d-42f4-9ff5-eeca4931caee",
             "name": "Microsoft.Extensions.FileSystemGlobbing",
             "version": "3.1.31",
             "purl": "pkg:nuget/Microsoft.Extensions.FileSystemGlobbing@3.1.31",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "no"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "yes"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -388,18 +428,18 @@
         },
         {
             "type": "library",
-            "bom-ref": "fc417f42-3976-4ae5-b432-cdf6903858ee",
+            "bom-ref": "17eedbce-1be9-407e-9cb5-c17515ca5c62",
             "name": "Serilog",
             "version": "2.9.0",
             "purl": "pkg:nuget/Serilog@2.9.0",
             "properties": [
                 {
                     "name": "GOST:attack_surface",
-                    "value": "yes"
+                    "value": "undefined"
                 },
                 {
                     "name": "GOST:security_function",
-                    "value": "no"
+                    "value": "undefined"
                 }
             ],
             "externalReferences": [
@@ -416,59 +456,59 @@
     ],
     "dependencies": [
         {
-            "ref": "c39351ab-0d4c-4d84-aeea-d09983cb8646",
+            "ref": "80ec5ac8-a0ee-45b3-bc20-556dcb2237d4",
             "dependsOn": []
         },
         {
-            "ref": "b16c38e3-a225-4d08-a76e-2007350e1883",
+            "ref": "cc2e46da-b1cb-48c1-bd8a-bbbdecfa23bc",
             "dependsOn": []
         },
         {
-            "ref": "1b1f29dc-99d1-4a5b-9505-eef77cf1d412",
+            "ref": "14d74c0f-49cf-40cf-902b-235c0e506a98",
             "dependsOn": []
         },
         {
-            "ref": "30ddb1ee-1413-4dfd-9471-4ee1d4167b60",
+            "ref": "f844f966-d93d-4515-ab9e-f48dbcc18ae8",
             "dependsOn": []
         },
         {
-            "ref": "48ac74e9-0afb-424c-ae23-12c796581468",
+            "ref": "3a8f2ec7-ac2f-4700-9096-b30e45309e50",
             "dependsOn": []
         },
         {
-            "ref": "37d88f37-542d-4737-b26e-b8b124eeb86e",
+            "ref": "4f2f1554-d666-40de-83b1-1a04e2ab46f5",
             "dependsOn": []
         },
         {
-            "ref": "5012a451-d646-49ab-8e56-5edb652525c6",
+            "ref": "071d450c-37eb-4613-b952-b453433df5d6",
             "dependsOn": []
         },
         {
-            "ref": "76948749-b124-4a39-908f-fad0d9d6ae76",
+            "ref": "64da6324-afdc-4935-8f6d-99d14f848aaf",
             "dependsOn": []
         },
         {
-            "ref": "ad1a19f6-5d44-4cb1-9b4e-7ea7e9fca747",
+            "ref": "6f84c58a-e598-4543-acf1-2665d98b3617",
             "dependsOn": []
         },
         {
-            "ref": "f57de3d9-fa03-48ce-b864-7138dea234c0",
+            "ref": "9a693f36-9723-4075-a0d3-89ff2949e24d",
             "dependsOn": []
         },
         {
-            "ref": "cbbc7687-9219-4cc7-b9f7-eaabbeac7dd4",
+            "ref": "7e1dc39a-2bd0-4dc5-91bf-f564ba322a5a",
             "dependsOn": []
         },
         {
-            "ref": "96b0669e-901a-48a2-a3f4-38e02be7b6dc",
+            "ref": "7675381f-3869-4328-9ee8-8abb980608a3",
             "dependsOn": []
         },
         {
-            "ref": "9cef7530-312c-4d72-883c-8db05c4a89dc",
+            "ref": "6808834a-ec7d-42f4-9ff5-eeca4931caee",
             "dependsOn": []
         },
         {
-            "ref": "fc417f42-3976-4ae5-b432-cdf6903858ee",
+            "ref": "17eedbce-1be9-407e-9cb5-c17515ca5c62",
             "dependsOn": []
         }
     ]
