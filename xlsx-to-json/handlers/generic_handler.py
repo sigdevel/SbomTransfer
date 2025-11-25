@@ -5,7 +5,12 @@ import pandas as pd
 from urllib.parse import urlparse
 
 def convert_generic_purl(purl):
-    if pd.isna(purl):
+    if pd.isna(purl) or not isinstance(purl, str):
+        return None
+
+    purl = purl.strip()
+
+    if not purl:
         return None
 
     if purl.startswith("https://github.com/") and "archive" in purl:

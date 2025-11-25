@@ -41,8 +41,18 @@ def check_required_columns(df, required_columns):
 
 
 def convert_purl(purl, component_name=None, version=None):
-    if pd.isna(purl) and component_name and version:
-        return handle_nuget_purl(purl, component_name, version)
+    if pd.isna(purl):
+        if component_name and version:
+            return handle_nuget_purl(purl, component_name, version)
+        return None
+
+    if not isinstance(purl, str):
+        return handle_nuget_purl(None, component_name, version) if component_name and version else None
+
+    purl = purl.strip()
+
+    if not purl:
+        return handle_nuget_purl(None, component_name, version) if component_name and version else None
 
     if purl.startswith("pkg:nuget/"):
         return handle_nuget_purl(purl)
